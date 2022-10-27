@@ -1,0 +1,368 @@
+/*
+https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
+https://coolors.co/palette/cad2c5-84a98c-52796f-354f52-2f3e46
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #354F52;
+}
+/*  główna część strony     */
+.main{
+    min-height: 100vh;
+    height: 100%;
+    width: 80vw;
+    color: #CAD2C5;
+    float: right;
+}
+.image-container{
+    width: 100%;
+    height: 44vh;
+    padding: 2vh 5%;
+    background-color: hsl(199, 64%, 70%);
+}
+.main .background-image{
+    width: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index-image{
+    background: url("mainbg_images/room2.jpeg");
+    height: 40vh;
+}
+.kuchnia-image{
+    background: url("https://source.unsplash.com/random/?kitchen");
+    height: 40vh;
+}
+.salon-image{
+    background: url("https://source.unsplash.com/random/?living room");
+    height: 40vh;
+}
+.sypialnia-image{
+    background: url("https://source.unsplash.com/random/?bedroom");
+    height: 40vh;
+}
+.jadalnia-image{
+    background: url("https://source.unsplash.com/random/?dining room");
+    height: 40vh;
+}
+.cart-image{
+    background: url("mainbg_images/kasa-fiskalna.jpg");
+    height: 30vh;
+}
+.text-container{
+    width: 450px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+.glass-title{
+    color: white;
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+}
+.website-description{
+    font-size: 2em;
+    margin: 4vh 5vw 0;
+    line-height: 1.3em;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+}
+.website-description p{
+    margin: 40px 0;
+}
+.website-description .title{
+    font-size: 1.25em;
+}
+/* zawartość sklepu /  karty z przedmiotami*/
+.item-category{
+    width: 100%;
+    height:600px;
+    padding: 50px;
+    margin-bottom: 80px;
+}
+.item-category .title{
+    font-size: 3em;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+.category-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.card-container{
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    transition: 0.3s;
+    position: relative;
+    margin-right: 40px;
+}
+.card-container:hover{
+    transform: scale(1.02);
+}
+.card-description{
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 0.5s;
+    display: flex;
+    padding-left: 25%;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    font-size: 1.5em;
+}
+.card-container:hover .card-description{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 1;
+}
+.addtocart-button{
+    position: absolute;
+    background-color: #4ae470;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.08s;
+    
+}
+.addtocart-button svg{
+    height: 35px;
+    width: 35px;
+}
+
+.shopping-list-container{
+    padding: 15px;
+    margin: 30px 50px;
+    font-size: 2em;
+    width: 600px;
+    min-height: 450px;
+    /* From https://css.glass */
+    background: rgba(47, 62, 70, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(47, 62, 70, 0.27);
+}
+.shopping-list-container p{
+    text-align: center;
+}
+.shopping-list-wrapper{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+.shopping-list-items{
+    list-style-position: inside;
+}
+.shopping-list-prices{
+    list-style: none;
+}
+
+/*  sidebar */
+
+.sidebar{
+    height: 100vh;
+    width: 20vw;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: #84A98C;
+}
+.sidebar .title{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(133, 18%, 53%);
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: black;
+}
+.sidebar .title svg{
+    width: 50px;
+    margin-right: 20px;
+}
+.sidebar .title h1{
+    justify-content: center;
+    margin: 10px 0px;
+    margin-right: 15px;
+    text-align: center;
+}
+.sidebar-button{
+    width: 100%;
+    height: 70px;
+    margin: 5px 0;
+    background: none;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 1.55em;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.koszyk{
+    margin-top: 30px;
+    font-size: 1.7em;
+    height: 90px;
+}
+.sidebar-button:hover, .sidebar-button:focus{
+    box-shadow: inset 20vw 0 0 0 rgba(11, 1, 48, 0.075);
+}
+.sidebar-button:hover, .sidebar-button:focus{
+    box-shadow: inset 20vw 0 0 0 rgba(0, 0, 0, 0.075);
+}
+/*  linki do zdjęć   */
+/*kuchnia*/
+.kuchenka1{
+    background: url(./images/kuchnia/kuchenka1.jpg);
+}
+.kuchenka2{
+    background: url(./images/kuchnia/kuchenka2.jpg);
+}
+.kuchenka3{
+    background: url(./images/kuchnia/kuchenka3.jpg);
+}
+.lodowka1{
+    background: url(./images/kuchnia/lodowka1.jpg);
+}
+.lodowka2{
+    background: url(./images/kuchnia/lodowka2.jpg);
+}
+.lodowka3{
+    background: url(./images/kuchnia/lodowka3.jpg);
+}
+.zmywarka1{
+    background: url(./images/kuchnia/zmywarka1.jpg);
+}
+.zmywarka2{
+    background: url(./images/kuchnia/zmywarka2.jpg);
+}
+.zmywarka3{
+    background: url(./images/kuchnia/zmywarka3.jpg);
+}
+/*salon*/
+.kanapa1{
+    background: url(./images/salon/kanapa1.jpg);
+}
+.kanapa2{
+    background: url(./images/salon/kanapa2.jpg);
+}
+.kanapa3{
+    background: url(./images/salon/kanapa3.jpg);
+}
+.fotel1{
+    background: url(./images/salon/fotel1.jpg);
+}
+.fotel2{
+    background: url(./images/salon/fotel2.jpg);
+}
+.fotel3{
+    background: url(./images/salon/fotel3.jpg);
+}
+.kstolik1{
+    background: url(./images/salon/kstolik1.jpg);
+}
+.kstolik2{
+    background: url(./images/salon/kstolik2.jpg);
+}
+.kstolik3{
+    background: url(./images/salon/kstolik3.jpg);
+}
+/*sypialnia*/
+.lozko1{
+    background: url(./images/sypialnia/lozko1.jpg);
+}
+.lozko2{
+    background: url(./images/sypialnia/lozko2.jpg);
+}
+.lozko3{
+    background: url(./images/sypialnia/lozko3.jpg);
+}
+.nstolik1{
+    background: url(./images/sypialnia/nstolik1.jpg);
+}
+.nstolik2{
+    background: url(./images/sypialnia/nstolik2.jpg);
+}
+.nstolik3{
+    background: url(./images/sypialnia/nstolik3.jpg);
+}
+.szafa1{
+    background: url(./images/sypialnia/szafa1.jpg);
+}
+.szafa2{
+    background: url(./images/sypialnia/szafa2.jpg);
+}
+.szafa3{
+    background: url(./images/sypialnia/szafa3.jpg);
+}
+/*jadalnia*/
+.stol1{
+    background: url(./images/jadalnia/stol1.jpg);
+}
+.stol2{
+    background: url(./images/jadalnia/stol2.jpg);
+}
+.stol3{
+    background: url(./images/jadalnia/stol3.jpg);
+}
+.krzeslo1{
+    background: url(./images/jadalnia/krzeslo1.jpg);
+}
+.krzeslo2{
+    background: url(./images/jadalnia/krzeslo2.jpg);
+}
+.krzeslo3{
+    background: url(./images/jadalnia/krzeslo3.jpg);
+}
+.lampa1{
+    background: url(./images/jadalnia/lampa1.jpg);
+}
+.lampa2{
+    background: url(./images/jadalnia/lampa2.jpg);
+}
+.lampa3{
+    background: url(./images/jadalnia/lampa3.jpg);
+}
+.card-container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
