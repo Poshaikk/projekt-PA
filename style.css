@@ -116,6 +116,9 @@ html{
     transition: 0.3s;
     position: relative;
     margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .card-container:hover{
     transform: scale(1.02);
@@ -123,14 +126,15 @@ html{
 .card-description{
     height: 25%;
     width: 100%;
+    padding-bottom: 35px;
     position: absolute;
     bottom: 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: 0.5s;
     display: flex;
-    padding-left: 25%;
     align-items: center;
+    justify-content: center;
     font-family: 'Poppins', sans-serif;
     opacity: 0;
     font-size: 1.5em;
@@ -141,19 +145,21 @@ html{
     opacity: 1;
 }
 .addtocart-button{
-    position: absolute;
     background-color: #4ae470;
-    right: 30px;
-    bottom: 30px;
-    width: 60px;
-    height: 60px;
+    position: absolute;
+    width: 120px;
+    height: 50px;
     border: 1px solid black;
-    border-radius: 100%;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.08s;
-    
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 5px;
 }
 .addtocart-button svg{
     height: 35px;
@@ -161,10 +167,9 @@ html{
 }
 
 .shopping-list-container{
-    padding: 15px;
-    margin: 30px 50px;
+    margin: 1.5%;
     font-size: 2em;
-    width: 600px;
+    width: 44%;
     min-height: 450px;
     /* From https://css.glass */
     background: rgba(47, 62, 70, 0.7);
@@ -179,6 +184,7 @@ html{
     text-align: center;
 }
 .shopping-list-wrapper{
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     font-size: 0.5em;
@@ -193,7 +199,92 @@ html{
     display: none;
     font-size: 2em;
 }
+.shopping-list-wrapper p{
+    margin-top: 100px;
+}
+.cart-content-wrapper{
+    box-sizing: content-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.checkout{
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.checkout h1{
+    width: fit-content;
+    margin: 30px auto 0;
+}
+.payment-form{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.row, .final-price{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.payment-form input{
+    box-sizing: border-box;
+    margin: 5px 10px;
+    width: 50%;
+    padding: 6px 10px;
+    height: 50px;
+    border: 0;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+    outline: none;
+    border: black solid 2px;
+    transition: 0.5s;
+}
+.payment-form input:focus{
+    border: #84A98C solid 2px;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+.inputs input{
+    width: 50%;
+}
+#adress{
+    width: 100%;
+}
+#email{
+    width: 100%;
+}
+#company{
+    width: 100%;
+}
+#telephone{
+    width: 100%;
+}
+.final-price .label, #final-price{
+    font-size: 1.8em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.final-price .label{
+    width: 40%;
+}
+#zakup{
+    background-color: rgb(128, 182, 243);
+    font-size: 1.5em;
+}
 /*  sidebar */
 
 .sidebar{
@@ -207,6 +298,7 @@ html{
 .sidebar .title{
     height: 100px;
     width: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -256,6 +348,113 @@ html{
 .sidebar-button:hover, .sidebar-button:focus{
     box-shadow: inset 20vw 0 0 0 rgba(0, 0, 0, 0.075);
 }
+@media only screen and (max-width: 1280px) {
+    .main{
+        width: 100vw;
+        padding-top: 10vh;
+    }
+    .sidebar{
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        background-color: #84A98C;
+        z-index: 10;
+    }
+    .sidebar .title{
+        height: 100%;
+        width: 20vw;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Raleway', sans-serif;
+        background-color: hsl(133, 18%, 53%);
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+        font-size: 0.7em;
+    }
+    .sidebar .title svg{
+        display: none;
+    }
+    .sidebar .title h1{
+        justify-content: center;
+        margin: 10px 0px;
+        text-align: center;
+    }
+    .sidebar-button{
+        width: 20vw;
+        height: 100%;
+        margin: 0;
+        background: none;
+        display: flex;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        font-size: 1.55em;
+        text-decoration: none;
+        color: black;
+        font-family: 'Roboto', sans-serif;
+    }
+    .background-image{
+        z-index: -1;
+    }
+    .shopping-list-container{
+        padding: 15px;
+        margin: 30px 50px;
+        font-size: 2.5em;
+        width: 80%;
+        min-height: 450px;
+        /* From https://css.glass */
+        background: rgba(47, 62, 70, 0.7);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: blur(7.5px);
+        border: 1px solid rgba(47, 62, 70, 0.27);
+        font-family: 'Roboto', sans-serif;
+    }
+    .cart-content-wrapper{
+        justify-content: center;
+    }
+  }
+  @media only screen and (max-width: 860px) {
+    .category-items{
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .item-category{
+        height: 1600px;
+        margin-bottom: 150px;
+    }
+    .card-container{
+        margin: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .card-container{
+        height: 500px;
+        width: 600px;
+        border-radius: 20px;
+        transition: 0.3s;
+        position: relative;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cart-content-wrapper{
+        width: 100%;
+    }
+  }
 /*  linki do zdjęć   */
 /*kuchnia*/
 .kuchenka1{

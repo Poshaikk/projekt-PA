@@ -31,16 +31,53 @@
                 </p>
             </div>
         </div>
-        <div class="shopping-list-container">
-            <p>To jest zawartość twojego koszyka:</p>
-            <div class="shopping-list-wrapper">
-                <ul id="shopping-list-items">
-
-                </ul>
-                <ul id="shopping-list-prices">
+        <div class="cart-content-wrapper">
+            <div class="shopping-list-container">
+                <p>To jest zawartość twojego koszyka:</p>
+                <div class="shopping-list-wrapper">
+                    <ul id="shopping-list-items">
+    
+                    </ul>
+                    <ul id="shopping-list-prices">
+                        
+                    </ul>
+                    <p id="empty-cart">Koszyk jest pusty :(</p>
+                </div>
+            </div>
+            <div class="checkout">
+                <div class="title-container">
+                    <h1>Płatność i dostawa</h1>
+                </div>
+                <form class="payment-form" onsubmit="submit(); return false">
+                    <div class="row">
+                        <input type="text" name="name" id="name" placeholder="Podaj swoje imię">
+                        <input type="text" name="surname" id="surname" placeholder="Podaj swoje nazwisko" required>
+                    </div>
+                    <div class="row">
+                        <input type="text" name="adress" id="adress" placeholder="Podaj adres dostawy" required>
+                    </div>
+                    <div class="row">
+                        <input type="email" name="email" id="email" placeholder="Podaj swój adres E-mail" required>
+                    </div>
+                    <div class="row">
+                        <input type="text" name="company" id="company" placeholder="Podaj nazwę firmy (opcjonalne)">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="zipcode" id="zipcode" placeholder="Podaj kod pocztowy">
+                        <input type="text" name="city" id="city" placeholder="Podaj miasto zamieszkania">
+                    </div>
+                    <div class="row">
+                        <input type="tel" name="telephone" id="telephone" placeholder="Podaj numer telefonu" pattern="[0-9]{9}">
+                    </div>
+                    <div class="row final-price">
+                        <p class="label">Kwota do zapłaty</p>
+                        <div class="inputs">
+                            <input type="text" name="final-price" id="final-price" readonly>
+                            <input type="submit" id="zakup" value="Zakup">
+                        </div>
+                    </div>
                     
-                </ul>
-                <p id="empty-cart">Koszyk jest pusty :(</p>
+                </form>
             </div>
         </div>
         <!--todo -  dodac podstrony z produktami, losowymi cenami, unsplash pokoje, koszyk dzialający na danych sesji i potencjalnie cos jeszcze-->
