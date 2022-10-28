@@ -173,6 +173,7 @@ html{
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
     border: 1px solid rgba(47, 62, 70, 0.27);
+    font-family: 'Roboto', sans-serif;
 }
 .shopping-list-container p{
     text-align: center;
@@ -180,13 +181,17 @@ html{
 .shopping-list-wrapper{
     display: flex;
     justify-content: space-between;
-    font-size: 0.8em;
+    font-size: 0.5em;
 }
-.shopping-list-items{
+#shopping-list-items{
     list-style-position: inside;
 }
-.shopping-list-prices{
+#shopping-list-prices{
     list-style: none;
+}
+#empty-cart{
+    display: none;
+    font-size: 2em;
 }
 
 /*  sidebar */
@@ -241,6 +246,9 @@ html{
     margin-top: 30px;
     font-size: 1.7em;
     height: 90px;
+}
+.capitalize{
+    text-transform: capitalize;
 }
 .sidebar-button:hover, .sidebar-button:focus{
     box-shadow: inset 20vw 0 0 0 rgba(11, 1, 48, 0.075);

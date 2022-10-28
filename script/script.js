@@ -6,24 +6,22 @@ document.onkeyup = (pressedKey) => {
         location.replace("kuchnia.html")
     }
     if(pressedKey.keyCode == 51){
-        location.replace("kuchnia.html")
+        location.replace("sypialnia.html")
     }
     if(pressedKey.keyCode == 52){
-        location.replace("kuchnia.html")
+        location.replace("salon.html")
     }
     if(pressedKey.keyCode == 53){
-        location.replace("kuchnia.html")
+        location.replace("jadalnia.html")
     }
     if(pressedKey.keyCode == 54){
-        console.log(sessionStorage.getItem("kuchenka1"))
-    }
-    if(pressedKey.keyCode == 55){
         location.replace("koszyk.html")
     }
 }
 if(sessionStorage.getItem("sessionid") == null){
     sessionStorage.setItem("sessionid", 1)
-    sessionStorage.setItem("cart_list", JSON.stringify([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
+    sessionStorage.setItem("product_amounts", JSON.stringify([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
+    sessionStorage.setItem("product_list", JSON.stringify(["kuchenka1", "kuchenka2","kuchenka3","lodowka1","lodowka2","lodowka3","zmywarka1","zmywarka2","zmywarka3","kanapa1", "kanapa2", "kanapa3", "fotel1", "fotel2", "fotel3", "kstolik1","kstolik2","kstolik3","lozko1", "lozko2", "lozko3", "nstolik1","nstolik2","nstolik3","szafa1", "szafa2", "szafa3", "stol1", "stol2", "stol3", "krzeslo1","krzeslo2","krzeslo3","lampa1", "lampa2", "lampa3"]))
     sessionStorage.setItem("kuchenka1", JSON.stringify(["kuchenka gazowa vestfrost", Math.floor(Math.random()*100+500)]))
     sessionStorage.setItem("kuchenka2", JSON.stringify(["kuchenka gazowa lozamet", Math.floor(Math.random()*100+500)]))
     sessionStorage.setItem("kuchenka3", JSON.stringify(["kuchenka gazowa la germanica", Math.floor(Math.random()*100+500)]))
@@ -116,7 +114,7 @@ if(document.getElementById("stol1") !== null){
     addtocartListener("lampa1", 33)
     addtocartListener("lampa2", 34)
     addtocartListener("lampa3", 35)
-}lampa1
+}
 function addtocartListener(elementID, index){
     console.log(sessionStorage.getItem(elementID))
     var element = document.getElementById(elementID)
@@ -126,11 +124,11 @@ function addtocartListener(elementID, index){
 }
 
 function addtocart(itemID, elementID){
-    var tempList = JSON.parse(sessionStorage.getItem("cart_list"))
+    var tempList = JSON.parse(sessionStorage.getItem("product_amounts"))
     tempList[itemID] +=1
-    sessionStorage.removeItem("cart_list")
-    sessionStorage.setItem("cart_list", JSON.stringify(tempList))
-    console.log(sessionStorage.getItem("cart_list"))
+    sessionStorage.removeItem("product_amounts")
+    sessionStorage.setItem("product_amounts", JSON.stringify(tempList))
+    console.log(sessionStorage.getItem("product_amounts"))
     document.getElementById(elementID).style.transform = "scale(1.1)";
     setTimeout(function(){document.getElementById(elementID).style.transform = "scale(1)"}, 90)
 }
