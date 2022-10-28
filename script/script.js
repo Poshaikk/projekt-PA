@@ -1,20 +1,20 @@
 document.onkeyup = (pressedKey) => {
-    if(pressedKey.keyCode == 49){
+    if(pressedKey.keyCode == 49 && pressedKey.ctrlKey){
         location.replace("index.html")
     }
-    if(pressedKey.keyCode == 50){
+    if(pressedKey.keyCode == 50 && pressedKey.ctrlKey){
         location.replace("kuchnia.html")
     }
-    if(pressedKey.keyCode == 51){
+    if(pressedKey.keyCode == 51 && pressedKey.ctrlKey){
         location.replace("sypialnia.html")
     }
-    if(pressedKey.keyCode == 52){
+    if(pressedKey.keyCode == 52 && pressedKey.ctrlKey){
         location.replace("salon.html")
     }
-    if(pressedKey.keyCode == 53){
+    if(pressedKey.keyCode == 53 && pressedKey.ctrlKey){
         location.replace("jadalnia.html")
     }
-    if(pressedKey.keyCode == 54){
+    if(pressedKey.keyCode == 54 && pressedKey.ctrlKey){
         location.replace("koszyk.html")
     }
 }
@@ -22,6 +22,7 @@ if(sessionStorage.getItem("sessionid") == null){
     sessionStorage.setItem("sessionid", 1)
     sessionStorage.setItem("product_amounts", JSON.stringify([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
     sessionStorage.setItem("product_list", JSON.stringify(["kuchenka1", "kuchenka2","kuchenka3","lodowka1","lodowka2","lodowka3","zmywarka1","zmywarka2","zmywarka3","kanapa1", "kanapa2", "kanapa3", "fotel1", "fotel2", "fotel3", "kstolik1","kstolik2","kstolik3","lozko1", "lozko2", "lozko3", "nstolik1","nstolik2","nstolik3","szafa1", "szafa2", "szafa3", "stol1", "stol2", "stol3", "krzeslo1","krzeslo2","krzeslo3","lampa1", "lampa2", "lampa3"]))
+
     sessionStorage.setItem("kuchenka1", JSON.stringify(["kuchenka gazowa vestfrost", Math.floor(Math.random()*100+500)]))
     sessionStorage.setItem("kuchenka2", JSON.stringify(["kuchenka gazowa lozamet", Math.floor(Math.random()*100+500)]))
     sessionStorage.setItem("kuchenka3", JSON.stringify(["kuchenka gazowa la germanica", Math.floor(Math.random()*100+500)]))

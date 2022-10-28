@@ -10,7 +10,7 @@ function loadCart(){
             element = false
             var sListItem = document.createElement("li")
             var sListPrice = document.createElement("li")
-            sListItem.innerHTML =  `${GetStorage(productList[i])[0]} x ${productAmounts[i]}`.toString()
+            sListItem.innerHTML =  `${GetStorage(productList[i])[0]} - ${productAmounts[i]}szt`.toString()
             sListPrice.innerHTML = (`${GetStorage(productList[i])[1]}zł x ${productAmounts[i]} = ${GetStorage(productList[i])[1]*productAmounts[i]}zł`).toString()
             shoppingListItems.appendChild(sListItem)
             shoppingListPrices.appendChild(sListPrice)
@@ -26,6 +26,9 @@ function loadCart(){
     else{
         document.getElementById("final-price").value = totalPayment+"zł"
     }
+
+}
+function unloadCart(){
 
 }
 function GetStorage(sessionKey){

@@ -208,6 +208,9 @@ html{
     display: flex;
     justify-content: space-between;
 }
+#shopping-list-items li{
+    text-transform: capitalize;
+}
 .checkout{
     width: 50%;
     font-family: 'Roboto', sans-serif;
@@ -338,9 +341,6 @@ html{
     margin-top: 30px;
     font-size: 1.7em;
     height: 90px;
-}
-.capitalize{
-    text-transform: capitalize;
 }
 .sidebar-button:hover, .sidebar-button:focus{
     box-shadow: inset 20vw 0 0 0 rgba(11, 1, 48, 0.075);
