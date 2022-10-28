@@ -405,9 +405,9 @@ html{
     }
     .shopping-list-container{
         padding: 15px;
-        margin: 30px 50px;
+        margin: 30px 5%;
         font-size: 2.5em;
-        width: 80%;
+        width: 90%;
         min-height: 450px;
         /* From https://css.glass */
         background: rgba(47, 62, 70, 0.7);
@@ -418,9 +418,15 @@ html{
         border: 1px solid rgba(47, 62, 70, 0.27);
         font-family: 'Roboto', sans-serif;
     }
-    .cart-content-wrapper{
-        justify-content: center;
+    .checkout{
+        width: 100%;
     }
+    .cart-content-wrapper{
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+    
   }
   @media only screen and (max-width: 860px) {
     .category-items{

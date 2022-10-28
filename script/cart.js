@@ -32,3 +32,7 @@ function GetStorage(sessionKey){
     var answer = JSON.parse(sessionStorage.getItem(sessionKey))
     return answer
 }
+function transactionComplete(){
+    sessionStorage.setItem("product_amounts", JSON.stringify([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
+    alert("Dziękujemy za zakupy w naszym sklepie!")
+}
